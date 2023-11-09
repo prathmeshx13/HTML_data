@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Table.html" method="post" name="myform">
+        <header><h3>ADMISSION FORM</h3></header>
+        <hr>
+        <input type="text" placeholder="Enter your name" name="user">
+        <br>
+        <br>
+        <input type ="password" placeholder="password" name="password">
+        <br>
+        <br>
+        <p><b>Select Std</b></p>
+        <label for ="101">
+        <input type="radio" value="Class XI" name ="Class" id ="101"> Class XI
+        </label>
+        <br>
+        <label for ="102">
+        <input type="radio" value="Class XII" name ="Class" id ="102"> Class XII
+        </label>
+        <p><b>Select a subjects</b></p>
+        <label>
+            <input type ="checkbox" value="English" name="subject" id ="101">Maths
+        </label><br>
+        <label>
+            <input type ="checkbox" value="Physics" name="subject" id ="102">Physics
+        </label><br>
+        <label>
+            <input type ="checkbox" value="Chemistry" name="subject" id ="103">Chemistry
+        </label><br>
+        <label>
+        <input type ="checkbox" value="Computer Science" name="subject" id ="104">Computer Science
+        </label>
+        <br>
+        <br>
+        <p><b>Enter Location</b></p>
+        <select name ="City">
+            <option value ="Mumbai">Mumbai</option>
+            <option value ="Delhi">Delhi</option>
+            <option value ="Bangalore">Bangalore</option>
+            <option value ="Punjab">Punjab</option>
+        </select> 
+        <br>
+        <p><b>Feedback</b></p>
+        <textarea name="feedback" placeholder="Give your valuable feedback" id ="105"></textarea>
+        <br> 
+        <br>
+        <input type ="submit" value="Submit" onclick="validate()">
+       
+    </form>
+    <footer></footer>
+    <!-- <script>
+        function validate(){
+            document.getElementById("user").innerHTML
+            document.getElementById("password").innerHTML
+
+            if(user=="admin" && password=="abc") {
+           alert("login successfully");
+return false;
+            }
+           else{
+            alert("login unsuccessfully");
+           }
+        }
+
+        document.open
+    </script> -->
+<script>
+    function validate(){
+        var u = document.forms["myform"]["user"].value;
+        var p= document.forms["myform"]["password"].value;
+
+        if(u=="user" && p=="admin"){
+            alert("login successfully");
+            window.location.assign="Table.html";
+        }
+        else{
+            alert("Invalid user and password");
+        }
+    }
+</script>
+
+</body>
+</html>
